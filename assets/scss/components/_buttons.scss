@@ -1,0 +1,26 @@
+.btn {
+	position: relative;
+	top: 0;
+	padding: 15px 20px;
+	border: none;
+	border-radius: 20px;
+	width: 100%;
+	font-family: inherit;
+	background-color: $bg-btn-color;
+	color: $text-color;
+	font-size: 1.2em;
+	display: block;
+	cursor: pointer;
+	transition: top .2s ease;
+
+	&:hover {
+		top: 2px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.btn {
+		margin-left: auto;
+		width: 300px;
+	}
+}

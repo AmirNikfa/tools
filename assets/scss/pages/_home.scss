@@ -1,0 +1,22 @@
+body {
+	background: $bg-primary-color;
+	font-family: Fredoka, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: $text-color;
+	padding: 0 30px;
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#section-1 {
+	height: 70vh;
+}
+
+#section-2 {
+	margin-top: 50px;
+}

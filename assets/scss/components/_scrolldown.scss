@@ -1,0 +1,39 @@
+@keyframes scrolldown {
+	0% {
+		transform: translateY(20%) rotate(45deg);
+		opacity: 0.7;
+	}
+	50% {
+		transform: translateY(0%) rotate(45deg);
+		opacity: 0.2;
+	}
+	100% {
+		transform: translateY(20%) rotate(45deg);
+		opacity: 0.7;
+	}
+}
+
+.scrolldown {
+	@include perfect-centering();
+	flex-direction: column;
+
+	&__angle-1,
+	&__angle-2 {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-width: 0 0.25em 0.25em 0;
+		border-style: solid;
+		border-color: $text-color;
+		transform: rotate(45deg);
+	}
+
+	&__angle-1 {
+		animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+	}
+
+	&__angle-2 {
+		position: relative;
+		bottom: 26px;
+		animation: scrolldown 1.2s ease-in-out infinite;
+	}
+}

@@ -1,0 +1,162 @@
+.schedule-maker {
+	margin-top: $section-margin;
+	background-color: $bg-secondary-color;
+	border-radius: 10px;
+
+	&__row {
+		padding: 20px;
+		border-bottom: 1px solid $bg-tertiary-color;
+	}
+
+	&__title {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+	}
+
+	&__label {
+		display: inline-block;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+
+	&__input-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__inputs {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+		gap: 10px;
+		flex-basis: 80%;
+	}
+
+	&__input {
+		padding: 10px 15px;
+		border-radius: 10px;
+		border: none;
+		outline: none;
+		background-color: $bg-tertiary-color;
+		color: $text-color;
+
+		&:nth-of-type(1) {
+			margin: 0;
+		}
+	}
+
+	&__control {
+		flex-basis: 20%;
+	}
+
+	&__adder {
+		margin-left: 15px;
+		cursor: pointer;
+	}
+
+	&__remover {
+		margin-left: 17px;
+		cursor: pointer;
+	}
+
+	&__panel {
+		padding: 10px;
+		background-color: $bg-btn-color;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		cursor: pointer;
+	}
+
+	&__remove-row {
+		border-radius: 0;
+		background-color: $bg-btn-color-secondary;
+		border-bottom: 1px solid #c8d6e5;
+	}
+
+	&__update-table,
+	&__save-table,
+	&__reset-table {
+		margin-top: 10px;
+		border-radius: 15px;
+	}
+
+	&__reset-table {
+		background-color: $bg-btn-color-secondary;
+	}
+
+}
+
+.weekly-table-container {
+	border-radius: 10px;
+	overflow-x: scroll;
+}
+
+.weekly-table {
+	background: #1b2235;
+	border-radius: 10px;
+	width: 100%;
+	overflow: hidden;
+
+	&__tr:nth-child(odd) {
+		background: #232d3f;
+	}
+
+	&__tr:nth-child(even) {
+		background-color: #2a3448;
+	}
+
+	&__tr:hover {
+		background-color: #3c4248;
+	}
+
+	&,
+	&__td {
+		border: 1px solid #1b2235;
+		border-collapse: collapse;
+		margin: auto;
+		text-align: left;
+	}
+
+	&__th,
+	&__td {
+		padding: 20px 38px;
+	}
+
+	&__th {
+		color: #069ee9;
+		background-color: #1b2235;
+		text-align: left;
+	}
+
+	&__td {
+		color: #8a91a4;
+
+		&:first-child {
+			color: #ff4d4d;
+		}
+
+		&:hover {
+			background-color: #fff738;
+			color: black;
+			cursor: pointer;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.schedule-maker__update-table-div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.schedule-maker__update-table,
+	.schedule-maker__reset-table {
+		flex-basis: 49%;
+		margin-left: 0;
+	}
+}
+
+.weekly-table-save-styles {
+	margin-top: 50px;
+	margin-bottom: 15px;
+}

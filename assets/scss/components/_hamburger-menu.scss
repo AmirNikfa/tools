@@ -1,0 +1,56 @@
+#toggle-topmenu {
+	position: absolute;
+	top: -9px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.lines {
+	width: 20px;
+	height: 1px;
+	background-color: $text-color;
+	position: relative;
+	transition: $transition-menu;
+	z-index: 2;
+	
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 20px;
+		height: 1px;
+		background-color: $text-color;
+		transition: $transition-menu;
+	}
+
+	&::before {
+		top: -7px;
+	}
+
+	&::after {
+		top: 7px;
+	}
+}
+
+#toggle-topmenu:checked + .lines {
+	background-color: transparent;
+
+	&::before {
+		transform: rotate(225deg);
+		top: 0;
+	}
+
+	&::after {
+		transform: rotate(-225deg);
+		top: 0;
+	}
+}
+
+#toggle-topmenu:checked ~ .top-nav__list {
+	transform: translateX(0);
+	left: 0;
+}

@@ -1,0 +1,11 @@
+#main {
+	margin-top: $section-margin;
+}
+
+@media only screen and (min-width: 768px) {
+	#main {
+		margin: $section-margin 0 0 auto;
+		width: 65vw;
+	}
+	
+}

@@ -1,0 +1,73 @@
+.confirm-popup-container {
+	@include get-center("both");
+	position: fixed;
+	padding: 15px;
+	border-radius: 10px;
+	background-color: $bg-secondary-color;
+	min-width: 180px;
+	width: 35vw;
+	max-width: 300px;
+	text-align: center;
+	z-index: 1;
+	transform: scale(0) translate(-50%, -50%);
+	transition: transform 5s ease;
+}
+
+.confirm-popup {
+	&__close-wrapper {
+		text-align: right;
+	}
+
+	&__dialogue {
+		padding: 15px 10px;
+	}
+
+	&__response {
+		display: flex;
+		min-width: 100px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#yes,
+	#no {
+		padding: 10px;
+		cursor: pointer;
+	}
+
+	#no {
+		color: $bg-btn-color-secondary;
+		transition: background-color .5s ease;
+		border-radius: 5px;
+	}
+
+	#no:hover {
+		background-color: rgba($bg-btn-color-secondary, .2);
+	}
+}
+
+@keyframes show {
+	from {
+		transform: scale(0) translate(-50%, -50%);
+	}
+	to {
+		transform: scale(1) translate(-50%, -50%);
+	}
+}
+
+@keyframes hide {
+	from {
+		transform: scale(1) translate(-50%, -50%);
+	}
+	to {
+		transform: scale(0) translate(-50%, -50%);
+	}
+}
+
+.show {
+	animation: show .4s ease forwards;
+}
+
+.hide {
+	animation: hide .4s ease forwards;
+}

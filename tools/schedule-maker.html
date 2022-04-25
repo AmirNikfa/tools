@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content=">Create Your Own Weekly Schedule
+			Easily!"
+		/>
+		<meta
+			name="keywords"
+			content="to-do list, schedule maker, color picker"
+		/>
+		<meta name="author" content="Amir Nikfa" />
+		<link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+		<link rel="stylesheet" href="../assets/css/styles.css" />
+		<script
+			src="../assets/scripts/schedule-maker/app.js"
+			type="module"
+			defer
+		></script>
+		<title>Sweet Tools | Schedule Maker!</title>
+	</head>
+	<body>
+		<template class="schedule-maker__input-template">
+			<input type="text" class="schedule-maker__input" />
+		</template>
+		<template class="schedule-maker__row-template">
+			<div class="schedule-maker__row">
+				<h2 class="schedule-maker__title">row 1</h2>
+				<div class="schedule-maker__column">
+					<label for="add-th" class="schedule-maker__label">Add Heading Data</label>
+					<div class="schedule-maker__input-list">
+						<div class="schedule-maker__inputs">
+							
+						</div>
+						<div class="schedule-maker__control">
+							<i class="schedule-maker__adder schedule-maker__th-adder fas fa-plus"></i>
+							<i class="fas fa-remove schedule-maker__remover"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+
+		<div id="overlay" class="invisible"></div>
+		<div id="overlay-confirm-popup" class="invisible"></div>
+		<div class="confirm-popup-container">
+			<div class="confirm-popup">
+				<div class="confirm-popup__close-wrapper">
+					<i class="confirm-popup__close fas fa-remove"></i>
+				</div>
+				<p class="confirm-popup__dialogue"></p>
+				<div class="confirm-popup__response">
+					<div id="yes"><span>Ok</span></div>
+					<div id="no"><span>Cancel</span></div>
+				</div>
+			</div>
+		</div>
+		<header id="main-header">
+			<nav class="top-nav">
+				<div class="position-relative">
+					<input type="checkbox" id="toggle-topmenu" />
+					<div class="lines"></div>
+					<ul class="top-nav__list">
+						<li class="top-nav__item">
+							<a href="../index.html" class="top-nav__link"
+								>Home</a
+							>
+						</li>
+						<li class="top-nav__item">
+							<a href="#" class="top-nav__link">Schedule Maker</a>
+						</li>
+						<li class="top-nav__item">
+							<a href="./todo-list.html" class="top-nav__link"
+								>To-Do List</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="logo">
+					<a href="#" class="logo__link"
+						><img
+							src="../assets/images/logo.svg"
+							alt="logo"
+							class="logo__image"
+					/></a>
+				</div>
+			</nav>
+		</header>
+		<main id="main">
+			<section class="schedule-demo section">
+				<div class="weekly-table-container">
+					<table class="weekly-table">
+						<thead>
+							<tr class="weekly-table__tr">
+								<th class="weekly-table__th"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="weekly-table__tr">
+								<td class="weekly-table__td"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div>
+					<button class="btn schedule-maker__save-table">View and Save</button>
+				</div>
+			</section>
+			<section class="schedule-maker position-relative">
+				<div class="schedule-maker__row">
+					<h2 class="schedule-maker__title">row 1</h2>
+					<div class="schedule-maker__column">
+						<label for="add-th" class="schedule-maker__label"
+							>Add Heading Data</label
+						>
+						<div class="schedule-maker__input-list">
+							<div class="schedule-maker__inputs">
+								<input
+									type="text"
+									placeholder="Column 1"
+									class="schedule-maker__input"
+								/>
+							</div>
+							<div class="schedule-maker__control">
+								<i
+									class="schedule-maker__adder schedule-maker__th-adder fas fa-plus"
+								></i>
+								<i class="fas fa-remove schedule-maker__remover" ></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="schedule-maker__row">
+					<h2 class="schedule-maker__title">row 2</h2>
+					<div class="schedule-maker__column">
+						<label for="add-th" class="schedule-maker__label"
+							>Add Table Data</label
+						>
+						<div class="schedule-maker__input-list">
+							<div class="schedule-maker__inputs">
+								<input
+									type="text"
+									placeholder="Column 1"
+									class="schedule-maker__input"
+								/>
+							</div>
+							<div class="schedule-maker__control">
+								<i
+									class="schedule-maker__adder schedule-maker__th-adder fas fa-plus"
+								></i>
+								<i class="fas fa-remove schedule-maker__remover" ></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<div class="schedule-maker__panel schedule-maker__remove-row">
+					<p>Remove Row <i class="fas fa-minus"></i></p>
+				</div>
+				<div class="schedule-maker__panel schedule-maker__add-row">
+					<p>Add Row <i class="fas fa-plus"></i></p>
+				</div>
+			</section>
+			<div class="schedule-maker__update-table-div">
+				<button class="schedule-maker__reset-table btn">Reset Table</button>
+				<button class="schedule-maker__update-table btn">Update Table</button>
+			</div>
+		</main>
+		<footer id="footer">
+			<h2>Made For Fun =)</h2>
+		</footer>
+	</body>
+</html>

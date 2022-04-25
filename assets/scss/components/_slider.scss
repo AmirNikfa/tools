@@ -1,0 +1,99 @@
+.slider-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+.slider {
+	@include box();
+	display: flex;
+	overflow-x: scroll;
+	z-index: 0;
+	cursor: grab;
+
+	&__navigator {
+		@include perfect-centering();
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40px;
+		height: 40px;
+		background-color: $text-color;
+		color: $link-color-dark;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: transform .5s ease;
+
+		&:nth-of-type(1) {
+			left: -20px;
+		}
+
+		&:nth-of-type(2) {
+			right: -20px;
+		}
+
+		&:active {
+			transform: translateY(-50%) scale(0.8);
+		}
+	}
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		flex: 0 0 100%;
+		padding: 20px;
+
+		&:nth-of-type(2) {
+			margin-left: 50px;
+
+			> .slider__image {
+				width: 85%;
+			}
+		}
+	}
+
+	&__image {
+		width: 70%;
+	}
+
+	&__link {
+		padding: 15px 0;
+		color: $link-color-light;
+	}
+
+	&__maps {
+		display: flex;
+		top: -25px;
+		position: relative;
+		margin: 0 auto;
+		width: max-content;
+	}
+
+	&__map {
+		width: 50px;
+		height: 5px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		background-color: $text-color;
+		border-radius: 5px;
+		cursor: pointer;
+		box-shadow: $bg-btn-color 0 0 5px 1px;
+		background-color: $text-color;
+
+		&:nth-of-type(1) {
+			margin: 0;
+		}
+
+		&--active {
+			background-color: $bg-btn-color;
+		}
+	}
+}
+

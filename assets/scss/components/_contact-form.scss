@@ -1,0 +1,58 @@
+.contact-form-container {
+	text-align: center;
+}
+
+.contact-form {
+	display: grid;
+	gap: 20px;
+}
+
+.input-wrapper {
+	position: relative;
+	// margin-bottom: 20px;
+}
+
+.input {
+	width: 100%;
+	padding: 30px 35px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	background-color: $bg-secondary-color;
+	color: $text-color;
+	font-family: inherit;
+	font-size: 1.2em;
+}
+
+.input-wrapper > label {
+	position: absolute;
+	top: 33px;
+	left: 35px;
+	color: #999;
+	transition: all .225s ease;
+}
+
+.input:focus + label, .input:valid + label {
+	font-size: .8em;
+	top: 12px;
+}
+
+.message {
+	height: 180px;
+	resize: none;
+}
+
+@media only screen and (min-width: 576px) {
+	.contact-form {
+		grid-template-columns: auto auto;
+		> .btn {
+			grid-column: 2 / 3;
+		}
+	}	
+
+	.input-wrapper:nth-of-type(1),
+	.input-wrapper:nth-of-type(4) {
+		grid-column: 1 / 3;
+	}
+
+}

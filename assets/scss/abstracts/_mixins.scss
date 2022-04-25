@@ -1,0 +1,24 @@
+@mixin perfect-centering() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin box($bg-color: $bg-secondary-color, $radius: 20px) {
+	background-color: $bg-color;
+	border-radius: $radius;
+}
+
+@mixin get-center($direction) {
+	@if($direction == "both") {
+		top: 50vh;
+		left: 50vw;
+		transform: translate(-50%, -50%);
+	} @else if($direction == "x") {
+		left: 50vw;
+		transform: translateX(-50%);
+	} @else {
+		top: 50vh;
+		transform: translateY(-50%);
+	}
+}

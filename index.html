@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Have Free Access to Free Tools, Such as Schedule Maker and To-Do List etc."
+		/>
+		<meta
+			name="keywords"
+			content="to-do list, schedule maker, color picker"
+		/>
+		<meta name="author" content="Amir Nikfa" />
+		<link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<script src="./assets/scripts/app.js" type="module" defer></script>
+		<title>Sweet Tools!</title>
+	</head>
+	<body>
+		<div id="overlay" class="invisible"></div>
+		<header id="main-header">
+			<nav class="top-nav">
+				<div class="position-relative">
+					<input type="checkbox" id="toggle-topmenu" />
+					<div class="lines"></div>
+					<ul class="top-nav__list">
+						<li class="top-nav__item">
+							<a href="#" class="top-nav__link">Home</a>
+						</li>
+						<li class="top-nav__item">
+							<a
+								href="./tools/schedule-maker.html"
+								class="top-nav__link"
+								>Schedule Maker</a
+							>
+						</li>
+						<li class="top-nav__item">
+							<a
+								href="./tools/todo-list.html"
+								class="top-nav__link"
+								>Schedule Maker</a
+							>
+						</li>
+						<li class="top-nav__item">
+							<a
+								href="./tools/todo-list.html"
+								class="top-nav__link"
+								>Schedule Maker</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="logo">
+					<a href="#" class="logo__link"
+						><img
+							src="./assets/images/logo.svg"
+							alt="logo"
+							class="logo__image"
+					/></a>
+				</div>
+			</nav>
+		</header>
+		<main id="main">
+			<section id="section-1" class="section">
+				<div class="slider-wrapper">
+					<div class="slider-content">
+						<div class="slider">
+							<div
+								id="back-btn"
+								class="slider__navigator fas fa-angle-left"
+							></div>
+							<figure class="slider__slide">
+								<img
+									src="./assets/images/weekly-schedule.svg"
+									alt="schedule"
+									class="slider__image"
+								/>
+								<figcaption class="slider__caption caption">
+									<a href="./tools/schedule-maker.html" class="slider__link"
+										>Create Your Own Weekly Schedule
+										Easily!</a
+									>
+								</figcaption>
+							</figure>
+							<figure class="slider__slide">
+								<img
+									src="./assets/images/weekly-schedule.svg"
+									alt="schedule"
+									class="slider__image"
+								/>
+								<figcaption class="slider__caption caption">
+									<a href="./tools/schedule-maker.html" class="slider__link"
+										>Create Your Own Weekly Schedule
+										Easily!</a
+									>
+								</figcaption>
+							</figure>
+							<figure class="slider__slide">
+								<img
+									src="./assets/images/weekly-schedule.svg"
+									alt="schedule"
+									class="slider__image"
+								/>
+								<figcaption class="slider__caption caption">
+									<a href="./tools/schedule-maker.html" class="slider__link"
+										>Create Your Own Weekly Schedule
+										Easily!</a
+									>
+								</figcaption>
+							</figure>
+							<div
+								id="forward-btn"
+								class="slider__navigator fas fa-angle-right"
+							></div>
+						</div>
+						<div class="slider__maps"></div>
+					</div>
+				</div>
+				<div class="scrolldown">
+					<a href="#section-2">
+						<div class="scrolldown__angle-1"></div>
+						<div class="scrolldown__angle-2"></div>
+					</a>
+				</div>
+			</section>
+			<section id="section-2" class="section">
+				<div class="contact-form-container">
+					<h2 class="title">Contact Me</h2>
+					<p class="paragraph">I Would Love to Hear From You!</p>
+					<form class="contact-form" autocomplete="off">
+						<div class="input-wrapper">
+							<input
+								type="text"
+								id="name"
+								class="input"
+								required
+							/>
+							<label for="name">Name*</label>
+						</div>
+						<div class="input-wrapper">
+							<input
+								type="text"
+								id="email"
+								class="input"
+								required
+							/>
+							<label for="email">Email*</label>
+						</div>
+						<div class="input-wrapper">
+							<input
+								type="number"
+								id="number"
+								class="input"
+								required
+							/>
+							<label for="number">Phone Number*</label>
+						</div>
+						<div class="input-wrapper">
+							<textarea
+								name="message"
+								id="message"
+								class="message input"
+								required
+							></textarea>
+							<label for="message">Message*</label>
+						</div>
+						<input class="btn" type="submit" />
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<h2>Made For Fun =)</h2>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+#footer {
+	@include perfect-centering();
+	
+	font-size: 1.3rem;
+	text-align: center;
+	padding: 40px 0;
+}
+
+@media only screen and (min-width: 768px) {
+	#footer {
+		margin-left: auto;
+		width: 65vw;
+	}
+}
